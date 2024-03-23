@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class='no-header-page  wsite-theme-light'>
+
+	<div id="banner-wrap" class="brisk-banner">
+		<header id="header-wrap">
+			<div id="header" class="container">
+				<div id="logo">{logo}</div>
+				<div id="nav">
+					<div id="w-menu-relative-links">
+					  <a href="https://www.ntue.edu.tw/" rel="external">北教大校首頁</a>
+					  <a href="https://www.facebook.com/NTUEPsycHealth/" rel="external"><i style="padding-right: 5px;" class="fa fa-facebook-official" aria-hidden="true"></i>粉絲專頁</a> 
+					  <a href="https://pacntue.ntue.edu.tw/" rel="external">北教大心理諮商學系</a>
+					</div>
+					<div>{menu}</div>
+				</div>
+				<label id="nav-trigger" class="hamburger" for="mobile-input"><span></span></label>
+			</div>
+			<div id="mobile-nav" class="container">
+				{menu}
+				<div id="w-mobile-menu-relative-links">
+					  <a href="https://www.ntue.edu.tw/" rel="external">北教大校首頁</a>
+					  <a href="https://www.facebook.com/NTUEPsycHealth/" rel="external"><i style="padding-right: 5px;" class="fa fa-facebook-official" aria-hidden="true"></i>粉絲專頁</a> 
+					  <a href="https://pacntue.ntue.edu.tw/" rel="external">北教大心理諮商學系</a>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<div id="main-wrap">
+		{{#sections}}
+			<div class="container">{content}</div>
+		{{/sections}}
+	</div>
+
+	<div id="footer-wrap">
+		<div class="container">{footer}</div>
+	</div>
+
+	<script type="text/javascript" src="/files/theme/plugins.js"></script>
+	<script type="text/javascript" src="/files/theme/custom.js"></script>
+	<script type="text/javascript" src="/files/theme/will-cus-tab.js"></script>
+
+</body>
+</html>
