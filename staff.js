@@ -129,7 +129,6 @@ let staffDatas = {
         if(staffDatas[staffName]){
             //放入醫師資訊
             var staffData = staffDatas[staffName];
-            var htmlUrl = staffData.pageUrl;
             var skills = staffData.major.map(x => `<h4 class="skills">${x}</h4>`).join('')
             var htmlName = `<h3>${staffData.name}</h3>`;
             var htmlCareer = `<p>${staffData.career}</p>`;
@@ -137,7 +136,12 @@ let staffDatas = {
             var htmlSkills = `<div class="skills-box">${skills}</div>`
             staff[i].innerHTML = htmlName + htmlCareer + htmlQuote + htmlSkills
             console.log(`${staffName}資訊輸入完成`)
+
             //放入連結
+            var a = document.createElement('a');
+            a.setAttribute('href', staffData.pageUrl);
+            colorBox[i].parentNode.insertBefore(a, colorBox[i]);
+            a.appendChild(colorBox[i]);
         }
         //沒醫師欄位，跳過
         else{
